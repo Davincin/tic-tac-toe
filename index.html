@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O & X</title>
+        
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e1106258ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>O & X</h1>
+    </header>
+    <div class="container">
+        <div class="players-row">
+            <div class="player-one">
+                <div class="player-one__icon">O</div>
+                <h2 class="player-one__name">Gracz #1</h2>
+                <h2 class="player-one__result"> 0 </h2>
+            </div>
+            <div class="player-two">
+                <div class="player-two__icon">X</div>
+                <h2 class="player-two__name">Gracz #2</h2>
+                <h2 class="player-two__result"> 0 </h2>
+            </div>
+        </div>
+        <div class="game-row">
+            <div class="game-field game-field__11"></div>
+            <div class="game-field game-field__12"></div>
+            <div class="game-field game-field__13"></div>
+            <div class="game-field game-field__21"></div>
+            <div class="game-field game-field__22"></div>
+            <div class="game-field game-field__23"></div>
+            <div class="game-field game-field__31"></div>
+            <div class="game-field game-field__32"></div>
+            <div class="game-field game-field__33"></div>
+        </div>
+    </div>
+    <div class="active-info active-info--player-one">
+       O
+    </div>
+    <aside class="popup">
+       <div class="popup__row">
+           <h2 class="popup__title">Podaj nazwy graczy</h2>
+           <label for="" class="popup__player-name">
+               <p>Gracz #1</p>
+               <input type="text" maxlength="10" class="popup__player-one-input">
+           </label>
+           <label for="" class="popup__player-name">
+               <p>Gracz #2</p>
+               <input type="text" maxlength="10" class="popup__player-two-input">
+           </label>
+           <p class="popup__info"></p>
+           <button class="popup__start-button">START</button>
+       </div>
+    </aside>
+    <aside class="win-popup win-popup--hidden">
+       <div class="win-popup__row">
+           <h2 class="win-popup__title">WIN POPUP <span class="win-popup__name"></span></h2>
+           <p class="win-popup__info">Przejdź do następnej rundy lub zacznij od nowa.</p>
+           <div class="win-popup__buttons">
+               <button class="win-popup__btn-new-game">Nowa gra</button>
+               <button class="win-popup__btn-next-round">Natępna runda</button>
+           </div>
+       </div>
+    </aside>
+    <script src="main.js"></script>
+</body>
+</html>

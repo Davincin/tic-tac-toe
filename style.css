@@ -19,7 +19,6 @@ body {
     font-family: 'Audiowide', cursive;
     color: white;
     overflow: hidden;
-    /* background-color: rgba(0, 0, 0, .9); */
 }
 
 .kk__hero-shadow {
@@ -41,6 +40,7 @@ body {
 .container {
     position: relative;
     width: 90%;
+    max-width: 2000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +53,6 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    /* background-color: rgba(0, 0, 0, .5); */
 }
 
 .player-one, .player-two {
@@ -85,8 +84,6 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, .7);
 }
-
-
 
 .player-one__name {
     color: #0AC4F5;
@@ -252,7 +249,6 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* background-color: red; */
 }
 
 .win-popup__btn-next-round {
@@ -280,9 +276,6 @@ body {
 }
 
 .active-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,3 +284,46 @@ body {
     font-size: 40px;
     background-color: rgba(0, 0, 0, .8);
 }
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    /* background-color: rgba(0, 0, 0, .8); */
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer__github-link {
+    padding-right: 30px;
+    text-decoration: none;
+    color: rgb(188, 204, 41);
+    transition: color .3s;
+}
+
+.footer__github-link:hover {
+    color: #fff;
+}
+
+.footer__github-link:hover i {
+    color: rgb(188, 204, 41);
+    transition: color .3s;
+}
+
+.footer__github-link i {
+    font-size: 20px;
+    padding-right: 10px;
+    color: #fff;
+}
+

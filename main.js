@@ -145,20 +145,21 @@ function write() {
 
 function startGame() {
     if($playerOneInput.value !== '' && $playerTwoInput.value !== '') {
-        $playerOneName.innerText = $playerOneInput.value;
-        $playerTwoName.innerText = $playerTwoInput.value;
-        player1.name = $playerOneInput.value;
-        player2.name = $playerTwoInput.value;
-        $popup.classList.add('popup--hidden');
-        $playerOneInput.value = '';
-        $playerTwoInput.value = '';
-        $popupInfo.innerText = '';
-        
-    } else {
+        if($playerOneInput.value.includes(' ') || $playerTwoInput.value.includes(' ')) {
+            $popupInfo.innerText = 'Nazwa gracza nie może zawierać spacji.'
+        } else {
+            $playerOneName.innerText = $playerOneInput.value;
+            $playerTwoName.innerText = $playerTwoInput.value;
+            player1.name = $playerOneInput.value;
+            player2.name = $playerTwoInput.value;
+            $popup.classList.add('popup--hidden');
+            $playerOneInput.value = '';
+            $playerTwoInput.value = '';
+            $popupInfo.innerText = '';
+        }
+    }  else {
         $popupInfo.innerText = 'Musisz podać nazwy graczy.'
     }
-    
-    
 };
 
 function afterRound(winner) {
